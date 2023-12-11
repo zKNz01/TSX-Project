@@ -1,6 +1,6 @@
 import React from 'react';
 import { useData } from '../Context/DataContext';
-import Vendas from './Vendas';
+import GraficoVendas from '../Components/GraficoVendas';
 
 const styleData: React.CSSProperties = {
   display: 'flex',
@@ -46,8 +46,9 @@ const Resumo = () => {
           </span>
         </div>
       </div>
-      <div className="box">Gráficos</div>
-      <Vendas />
+      <div className="box">
+        <GraficoVendas data={data} />
+      </div>
     </section>
   );
 };
